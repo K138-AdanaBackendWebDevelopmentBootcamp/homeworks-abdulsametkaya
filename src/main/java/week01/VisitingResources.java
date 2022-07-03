@@ -1,17 +1,19 @@
+package week01;
+
 import java.util.List;
 import java.util.Scanner;
 
-public class PermanentInstructor extends Person implements Instructor {
+public class VisitingResources extends Person implements Instructor{
 
     private String phoneNumber;
     private List<Course> courses;
+    private final int wage = 50;
     private int salary = salary();
 
-
-    public PermanentInstructor() {
+    public VisitingResources() {
     }
 
-    public PermanentInstructor(String name, Address address, String phoneNumber, List<Course> courses) {
+    public VisitingResources(String name, Address address, String phoneNumber, List<Course> courses) {
         super(name, address);
         this.phoneNumber = phoneNumber;
         this.courses = courses;
@@ -19,26 +21,13 @@ public class PermanentInstructor extends Person implements Instructor {
 
     @Override
     public int salary() {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Please enter your course id");
-        int courseid = scan.nextInt();
-        int wage = 0;
-        switch (courseid) {
-            case 101:
-                wage = matWage;
-                break;
-            case 102:
-                wage = turkishWage;
-                break;
-            case 103:
-                wage = geoWage;
-                break;
-            case 104:
-                wage = historyWage;
-                break;
-        }
 
-        return wage * hour;
+        System.out.println("Please enter your total working hours");
+        Scanner scan = new Scanner(System.in);
+
+        int hour = scan.nextInt();
+
+        return hour * wage;
     }
 
     public String getPhoneNumber() {
@@ -61,9 +50,10 @@ public class PermanentInstructor extends Person implements Instructor {
         return salary;
     }
 
+
     @Override
     public String toString() {
-        return "PermanentInstructor{" +
+        return "VisitingResources{" +
                 "phoneNumber='" + phoneNumber + '\'' +
                 ", courses=" + courses +
                 ", salary=" + salary +

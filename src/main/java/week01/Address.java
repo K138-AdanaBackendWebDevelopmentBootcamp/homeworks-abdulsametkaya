@@ -1,3 +1,5 @@
+package week01;
+
 public class Address {
 
     private String neighbourhood;

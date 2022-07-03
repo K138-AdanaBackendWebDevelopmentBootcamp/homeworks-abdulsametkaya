@@ -1,3 +1,5 @@
+package week01;
+
 public interface Instructor {
 
     int matWage = 60;

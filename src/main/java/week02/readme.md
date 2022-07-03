@@ -12,5 +12,4 @@ Features:
 
 - The program does basic CRUD processes.
 
-
-![img.png](img.png)
+![img.png](Diagram.jpg)

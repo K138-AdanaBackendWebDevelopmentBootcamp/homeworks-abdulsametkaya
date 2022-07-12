@@ -11,7 +11,7 @@ public class InstructorService implements CrudRepository<Instructor> {
 
     @Override
     public List<Instructor> findAll() {
-        return entityManager.createQuery("SELECT * FROM Instructor", Instructor.class).getResultList();
+        return entityManager.createQuery("FROM Instructor", Instructor.class).getResultList();
     }
 
     @Override

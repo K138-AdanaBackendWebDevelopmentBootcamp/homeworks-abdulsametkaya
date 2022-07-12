@@ -10,7 +10,7 @@ public class CourseService implements CrudRepository<Course> {
     @Override
     public List<Course> findAll() {
 
-        return entityManager.createQuery("SELECT * FROM Course", Course.class).getResultList();
+        return entityManager.createQuery("FROM Course", Course.class).getResultList();
     }
 
     @Override

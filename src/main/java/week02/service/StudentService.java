@@ -12,7 +12,7 @@ public class StudentService implements CrudRepository<Student> {
 
     @Override
     public List<Student> findAll() {
-        return entityManager.createQuery("SELECT * FROM Instructor", Student.class).getResultList();
+        return entityManager.createQuery("FROM Instructor", Student.class).getResultList();
     }
 
     @Override
